@@ -1,0 +1,9 @@
+{
+	"compilerOptions": {
+		"baseUrl": ".", // 기본 경로 설정
+		"paths": {
+			"@/*": ["src/*"] // '@'를 src 폴더로 매핑
+		}
+	},
+	"include": ["src/**/*"] // 포함할 파일 경로 설정
+}
