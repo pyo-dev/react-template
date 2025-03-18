@@ -15,14 +15,14 @@ export const LayoutHeader = () => {
 				<LmNavButton to="/" lmParents={true}><span className="lm-icon-doc color-white"></span>데시보드</LmNavButton>
 			</div>
 			<div className="nav">
-				<div className="title">리더마인</div>
-				<LmNavButton to="/leadermine/design" lmParents={true}><span className="lm-icon-smile color-white"></span>디자인 에셋</LmNavButton>
-				<LmNavButton to="/leadermine/filter" lmParents={true}><span className="lm-icon-el color-white"></span>필터</LmNavButton>
-				<LmNavButton to="/leadermine/loader" lmParents={true}><span className="lm-icon-play color-white"></span>로딩 샘플</LmNavButton>
-				<LmNavButton to="/leadermine/react" lmParents={true}><span className="lm-icon-star color-white"></span>react</LmNavButton>
+				<div className="title">pyo-dev</div>
+				<LmNavButton to="/pyo-dev/design" lmParents={true}><span className="lm-icon-smile color-white"></span>디자인 에셋</LmNavButton>
+				<LmNavButton to="/pyo-dev/filter" lmParents={true}><span className="lm-icon-el color-white"></span>필터</LmNavButton>
+				<LmNavButton to="/pyo-dev/loader" lmParents={true}><span className="lm-icon-play color-white"></span>로딩 샘플</LmNavButton>
+				<LmNavButton to="/pyo-dev/react" lmParents={true}><span className="lm-icon-star color-white"></span>react</LmNavButton>
 			</div>
 			<div className="nav last">
-				<div className="title">고객사 템플릿</div>
+				<div className="title">샘플 템플릿</div>
 				<LmNavButton to="/company" lmParents={true}><span className="lm-icon-hart color-white"></span>메인</LmNavButton>
 			</div>
 		</div>

@@ -3,21 +3,21 @@ import { Layout } from '@/layout/Layout';
 import { NotFound } from '@/pages/notFound/NotFound';
 import { Main } from '@/pages/main/Index';
 import { Login } from '@/pages/member/login/Login';
-import { LeadermineMain } from '@/pages/leadermine/Index';
-import { LeadermineDesign } from '@/pages/leadermine/design/Index';
-import { LeadermineFilter } from '@/pages/leadermine/filter/Index';
-import { LeadermineLoader } from '@/pages/leadermine/loader/Index';
-import { LeadermineReactMain } from '@/pages/leadermine/react/Index';
-import { LeadermineReactImg } from '@/pages/leadermine/react/img/Index';
-import { LeadermineReactData } from '@/pages/leadermine/react/data/Index';
-import { LeadermineReactBoard } from '@/pages/leadermine/react/board/Index';
-import { LeadermineReactBoardCode } from '@/pages/leadermine/react/board/Code';
-import { LeadermineReactBoardNoticeList } from '@/pages/leadermine/react/board/notice/List';
-import { LeadermineReactBoardNoticeView } from '@/pages/leadermine/react/board/notice/View';
-import { LeadermineReactBoardFaqList } from '@/pages/leadermine/react/board/faq/List';
-import { LeadermineReactPopup } from '@/pages/leadermine/react/popup/Index';
-import { LeadermineReactGnb } from '@/pages/leadermine/react/gnb/Index';
-import { LeadermineReactPlugin } from '@/pages/leadermine/react/plugin/Index';
+import { PyoDevMain } from '@/pages/pyo-dev/Index';
+import { PyoDevDesign } from '@/pages/pyo-dev/design/Index';
+import { PyoDevFilter } from '@/pages/pyo-dev/filter/Index';
+import { PyoDevLoader } from '@/pages/pyo-dev/loader/Index';
+import { PyoDevReactMain } from '@/pages/pyo-dev/react/Index';
+import { PyoDevReactImg } from '@/pages/pyo-dev/react/img/Index';
+import { PyoDevReactData } from '@/pages/pyo-dev/react/data/Index';
+import { PyoDevReactBoard } from '@/pages/pyo-dev/react/board/Index';
+import { PyoDevReactBoardCode } from '@/pages/pyo-dev/react/board/Code';
+import { PyoDevReactBoardNoticeList } from '@/pages/pyo-dev/react/board/notice/List';
+import { PyoDevReactBoardNoticeView } from '@/pages/pyo-dev/react/board/notice/View';
+import { PyoDevReactBoardFaqList } from '@/pages/pyo-dev/react/board/faq/List';
+import { PyoDevReactPopup } from '@/pages/pyo-dev/react/popup/Index';
+import { PyoDevReactGnb } from '@/pages/pyo-dev/react/gnb/Index';
+import { PyoDevReactPlugin } from '@/pages/pyo-dev/react/plugin/Index';
 import { CompanyMain } from '@/pages/company/Index';
 
 const MyRouter = () => {
@@ -31,47 +31,47 @@ const MyRouter = () => {
 					element: <Main />,
 				},
 				{
-					path: 'leadermine',
+					path: 'pyo-dev',
 					children: [
 						{
 							index: true,
-							element: <LeadermineMain />,
+							element: <PyoDevMain />,
 						},
 						{
 							path: 'design',
-							element: <LeadermineDesign />,
+							element: <PyoDevDesign />,
 						},
 						{
 							path: 'design',
-							element: <LeadermineDesign />,
+							element: <PyoDevDesign />,
 						},
 						{
 							path: 'filter',
-							element: <LeadermineFilter />,
+							element: <PyoDevFilter />,
 						},
 						{
 							path: 'loader',
-							element: <LeadermineLoader />,
+							element: <PyoDevLoader />,
 						},
 						{
 							path: 'react',
-							element: <LeadermineReactMain />,
+							element: <PyoDevReactMain />,
 							children: [
 								{
 									index: true,
-									element: <LeadermineReactImg />,
+									element: <PyoDevReactImg />,
 								},
 								{
 									path: 'data',
-									element: <LeadermineReactData />,
+									element: <PyoDevReactData />,
 								},
 								{
 									path: 'board',
-									element: <LeadermineReactBoard />,
+									element: <PyoDevReactBoard />,
 									children: [
 										{
 											index: true,
-											element: <LeadermineReactBoardCode />,
+											element: <PyoDevReactBoardCode />,
 										},
 										{
 											path: 'notice',
@@ -79,15 +79,15 @@ const MyRouter = () => {
 											children: [
 												{
 													index: true,
-													element: <LeadermineReactBoardNoticeList />,
+													element: <PyoDevReactBoardNoticeList />,
 												},
 												{
 													path: ':pageNo',
-													element: <LeadermineReactBoardNoticeList />,
+													element: <PyoDevReactBoardNoticeList />,
 												},
 												{
 													path: 'view/:viewNo',
-													element: <LeadermineReactBoardNoticeView />,
+													element: <PyoDevReactBoardNoticeView />,
 												},
 											]
 										},
@@ -97,11 +97,11 @@ const MyRouter = () => {
 											children: [
 												{
 													index: true,
-													element: <LeadermineReactBoardFaqList />,
+													element: <PyoDevReactBoardFaqList />,
 												},
 												{
 													path: ':pageNo',
-													element: <LeadermineReactBoardFaqList />,
+													element: <PyoDevReactBoardFaqList />,
 												},
 											]
 										},
@@ -109,19 +109,19 @@ const MyRouter = () => {
 								},
 								{
 									path: 'popup',
-									element: <LeadermineReactPopup />,
+									element: <PyoDevReactPopup />,
 								},
 								{
 									path: 'gnb',
-									element: <LeadermineReactGnb />,
+									element: <PyoDevReactGnb />,
 								},
 								{
 									path: 'plugin',
-									element: <LeadermineReactPlugin />,
+									element: <PyoDevReactPlugin />,
 								},
 								{
 									path: 'plugin/:pageId',
-									element: <LeadermineReactPlugin />,
+									element: <PyoDevReactPlugin />,
 								},
 							],
 						},
