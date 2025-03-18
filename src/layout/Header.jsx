@@ -3,7 +3,7 @@ import { LmNavButton } from "@/components/LmButton";
 export const LayoutHeader = () => {
 	return (
 		<div className="lmHeader">
-			<div className="logo">LEADERMINE</div>
+			<div className="logo">PYO-DEV</div>
 			<div className="profile">
 				<div className="img" style={{backgroundImage: 'url(https://dimg.donga.com/wps/NEWS/IMAGE/2009/06/09/7132013.1.jpg)'}}></div>
 				<div className="info">
