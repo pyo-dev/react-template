@@ -7,12 +7,12 @@ export const LayoutHeader = () => {
 			<div className="profile">
 				<div className="img" style={{backgroundImage: 'url(https://dimg.donga.com/wps/NEWS/IMAGE/2009/06/09/7132013.1.jpg)'}}></div>
 				<div className="info">
-					Jumin Pyo
+					Jungmin Pyo
 				</div>
 			</div>
 			<div className="nav">
 				<div className="title">메인</div>
-				<LmNavButton to="/" lmParents={true}><span className="lm-icon-doc color-white"></span>데시보드</LmNavButton>
+				<LmNavButton to="/" lmParents={true}><span className="lm-icon-doc color-white"></span>대시보드</LmNavButton>
 			</div>
 			<div className="nav">
 				<div className="title">pyo-dev</div>
