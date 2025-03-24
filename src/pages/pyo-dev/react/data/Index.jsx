@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLocation } from "react-router-dom";
-import { LmNavButton } from "@/components/LmButton";
+import { PyoNavButton } from "@/components/PyoButton";
 import {PyoDevReactDataSub1} from './Sub1';
 import {PyoDevReactDataSub2} from './Sub2';
 import {PyoDevReactDataSub3} from './Sub3';
@@ -47,62 +47,62 @@ export const PyoDevReactData = () => {
 
 	return (
 		<>
-			<div className="lm-tab">
-				<LmNavButton to="/pyo-dev/react/data"><div className="lm-icon-pin"></div>소스</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/data?type=example"><div className="lm-icon-pin"></div>미리보기</LmNavButton>
+			<div className="pyo-tab">
+				<PyoNavButton to="/pyo-dev/react/data"><div className="pyo-icon-pin"></div>소스</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/data?type=example"><div className="pyo-icon-pin"></div>미리보기</PyoNavButton>
 			</div>
 			{getType ? (
 				<>
-					<div className='lm-panel lm-panel-flex-wrap'>
-						<div className="lm-panel-inner-title">부모 컴포넌트 데이터1</div>
-						<div className='lm-panel-flex-inner'>
+					<div className='pyo-panel pyo-panel-flex-wrap'>
+						<div className="pyo-panel-inner-title">부모 컴포넌트 데이터1</div>
+						<div className='pyo-panel-flex-inner'>
 							<input
 								type="text"
 								name="name"
-								className='lm-input'
+								className='pyo-input'
 								value={prposData1.name || ''}
 								onChange={handleChangeData1}
 								placeholder="데이터1 이름"
 							/>
 						</div>
-						<div className='lm-panel-flex-inner'>
+						<div className='pyo-panel-flex-inner'>
 							<input
 								type="text"
 								name="tell"
-								className='lm-input'
+								className='pyo-input'
 								value={prposData1.tell || ''}
 								onChange={handleChangeData1}
 								placeholder="데이터1 전화번호"
 							/>
 						</div>
-						<div className='lm-panel-flex-inner'>
+						<div className='pyo-panel-flex-inner'>
 							이름 : {prposData1.name} <br />
 							전화버호 : {prposData1.tell}
 						</div>
 					</div>
-					<div className='lm-panel lm-panel-flex-wrap'>
-						<div className="lm-panel-inner-title">부모 컴포넌트 데이터2</div>
-						<div className='lm-panel-flex-inner'>
+					<div className='pyo-panel pyo-panel-flex-wrap'>
+						<div className="pyo-panel-inner-title">부모 컴포넌트 데이터2</div>
+						<div className='pyo-panel-flex-inner'>
 							<input
 								type="text"
 								name="name"
-								className='lm-input'
+								className='pyo-input'
 								value={prposData2.name || ''}
 								onChange={handleChangeData2}
 								placeholder="데이터2 이름"
 							/>
 						</div>
-						<div className='lm-panel-flex-inner'>
+						<div className='pyo-panel-flex-inner'>
 							<input
 								type="text"
 								name="tell"
-								className='lm-input'
+								className='pyo-input'
 								value={prposData2.tell || ''}
 								onChange={handleChangeData2}
 								placeholder="데이터2 전화번호"
 							/>
 						</div>
-						<div className='lm-panel-flex-inner'>
+						<div className='pyo-panel-flex-inner'>
 							이름 : {prposData2.name} <br />
 							전화버호 : {prposData2.tell}
 						</div>

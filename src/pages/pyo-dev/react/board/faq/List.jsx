@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { LmAxios } from '@/axios/LmAxios';
+import { PyoAxios } from '@/axios/PyoAxios';
 import { useParams } from 'react-router-dom';
 
-import { LmBoardList } from '@/components/board/faq/LmList';
-import { LmPaging } from '@/components/board/LmPaging';
+import { PyoBoardList } from '@/components/board/faq/PyoList';
+import { PyoPaging } from '@/components/board/PyoPaging';
 
 export const PyoDevReactBoardFaqList = () => {
 	const boardUrl = '/pyo-dev/react/board/faq';
@@ -31,7 +31,7 @@ export const PyoDevReactBoardFaqList = () => {
 
 	const getList = async (currentPage) => {
 		try {
-			const res = await LmAxios({
+			const res = await PyoAxios({
 				method: 'GET',
 				url: `/board_list.php?pageNo=${currentPage}&pageRow=${pageRow}`,
 			});
@@ -45,9 +45,9 @@ export const PyoDevReactBoardFaqList = () => {
 
 	return (
 		<>
-			<div className='lm-panel'>
-				<LmBoardList data={listData} />
-				<LmPaging data={pagingData} />
+			<div className='pyo-panel'>
+				<PyoBoardList data={listData} />
+				<PyoPaging data={pagingData} />
 			</div>
 		</>
 	);

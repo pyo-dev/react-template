@@ -2,11 +2,11 @@ import { atom } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist({
-	key: 'LM_TOAST_POP',
+	key: 'PYO_TOAST_POP',
 	// storage: sessionStorage,
 });
 
-const LM_TOAST_POP_RESET = {
+const PYO_TOAST_POP_RESET = {
 	position: {
 		bottom: '0',
 		right: '0',
@@ -16,11 +16,11 @@ const LM_TOAST_POP_RESET = {
 	items: null
 }
 
-export const LM_TOAST_POP = atom({
-	key: 'LM_TOAST_POP_ATOM',
+export const PYO_TOAST_POP = atom({
+	key: 'PYO_TOAST_POP_ATOM',
 	default: {
-		reset: LM_TOAST_POP_RESET,
-		...LM_TOAST_POP_RESET
+		reset: PYO_TOAST_POP_RESET,
+		...PYO_TOAST_POP_RESET
 	},
 	effects_UNSTABLE: [persistAtom],
 });

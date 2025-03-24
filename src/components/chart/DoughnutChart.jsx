@@ -4,7 +4,7 @@ import 'chart.js/auto';
 export const DoughnutChart = () => {
 
 
-	const lmData = {
+	const pyoData = {
 		labels: ['빨', '주', '노', '초', '파'],
 		datasets: [
 			{
@@ -39,5 +39,5 @@ export const DoughnutChart = () => {
 		},
 	};
 
-	return <Doughnut data={lmData} options={options} />;
+	return <Doughnut data={pyoData} options={options} />;
 };

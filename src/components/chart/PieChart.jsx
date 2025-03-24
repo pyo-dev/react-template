@@ -4,7 +4,7 @@ import 'chart.js/auto';
 export const PieChart = () => {
 
 
-	const lmData = {
+	const pyoData = {
 		labels: ['빨', '주', '노', '초', '파'],
 		datasets: [
 			{
@@ -39,5 +39,5 @@ export const PieChart = () => {
 		},
 	};
 
-	return <Pie data={lmData} options={options} />;
+	return <Pie data={pyoData} options={options} />;
 };

@@ -2,19 +2,19 @@ import { atom } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist({
-	key: 'LM_LODING',
+	key: 'PYO_LODING',
 	// storage: sessionStorage,
 });
 
-const LM_LODING_RESET = {
+const PYO_LODING_RESET = {
 	show: false,
 }
 
-export const LM_LODING = atom({
-	key: 'LM_LODING_ATOM',
+export const PYO_LODING = atom({
+	key: 'PYO_LODING_ATOM',
 	default: {
-		reset: LM_LODING_RESET,
-		...LM_LODING_RESET
+		reset: PYO_LODING_RESET,
+		...PYO_LODING_RESET
 	},
 	// effects_UNSTABLE: [persistAtom],
 });

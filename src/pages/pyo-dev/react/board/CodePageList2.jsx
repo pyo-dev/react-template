@@ -3,11 +3,11 @@ import Highlight from 'react-highlight'
 export const PyoDevReactBoardCodePageList2 = () => {
 	const importHmtl = `// @/page/board/faq/List.jsx
 import { useEffect, useState } from 'react';
-import { LmAxios } from '@/axios/LmAxios';
+import { PyoAxios } from '@/axios/PyoAxios';
 import { useParams } from 'react-router-dom';
 
-import { LmBoardList } from '@/components/board/faq/LmList';
-import { LmPaging } from '@/components/board/LmPaging';
+import { PyoBoardList } from '@/components/board/faq/PyoList';
+import { PyoPaging } from '@/components/board/PyoPaging';
 
 export const PyoDevReactBoardFaqList = () => {
 	const boardUrl = '/pyo-dev/react/board/faq';
@@ -35,7 +35,7 @@ export const PyoDevReactBoardFaqList = () => {
 
 	const getList = async (currentPage) => {
 		try {
-			const res = await LmAxios({
+			const res = await PyoAxios({
 				method: 'GET',
 				url: \`/board_list.php?pageNo=\${currentPage}&pageRow=\${pageRow}\`,
 			});
@@ -49,14 +49,14 @@ export const PyoDevReactBoardFaqList = () => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
 				<div className='w-full'>
-					<LmBoardList data={listData} />
+					<PyoBoardList data={listData} />
 				</div>
 			</div>
-			<div className='lm-panel lm-panel-flex-wrap'>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
 				<div className='w-full'>
-					<LmPaging data={pagingData} />
+					<PyoPaging data={pagingData} />
 				</div>
 			</div>
 		</>
@@ -66,7 +66,7 @@ export const PyoDevReactBoardFaqList = () => {
 
 	return (
 		<>
-			<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 		</>
 	);
 };

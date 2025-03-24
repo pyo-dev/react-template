@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
-import HOOK_LM_USER_INFO from '@/store/hooks/hookUserInfo';
+import HOOK_PYO_USER_INFO from '@/store/hooks/hookUserInfo';
 
 export const Login = () => {
-	const { getUserInfo, setUserInfo } = HOOK_LM_USER_INFO();
+	const { getUserInfo, setUserInfo } = HOOK_PYO_USER_INFO();
 
 	useEffect(() => {
 		setUserInfo('reset');

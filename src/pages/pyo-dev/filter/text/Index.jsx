@@ -1,10 +1,10 @@
 import Highlight from 'react-highlight'
-import { getFilter } from '@/utils/getFilter';
+import { FilterCode } from '../filterCode';
 
 export const FilterText = () => {
 	let filterJsIm =
 `// javascript
-<script src="/js/lmFilter.js"></script>
+<script src="/js/pyoFilter.js"></script>
 
 // react
 import { getFilter } from '@/utils/getFilter';`;
@@ -85,10 +85,13 @@ getFilter.spaceDelet('  입력 하시오 크크크  ');
 `;
 
 		return (
-			<div className="lm-panel lm-panel-flex-wrap">
-				<Highlight className='javascript lm-panel-code'>{filterJsIm}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{filterJs}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sampleJs}</Highlight>
-			</div>
+			<>
+				<FilterCode />
+				<div className="pyo-panel pyo-panel-flex-wrap">
+					<Highlight className='javascript pyo-panel-code'>{filterJsIm}</Highlight>
+					<Highlight className='javascript pyo-panel-code'>{filterJs}</Highlight>
+					<Highlight className='javascript pyo-panel-code'>{sampleJs}</Highlight>
+				</div>
+			</>
 		);
 };

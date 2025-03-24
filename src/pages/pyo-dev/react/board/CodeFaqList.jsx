@@ -1,11 +1,11 @@
 import Highlight from 'react-highlight'
 
 export const PyoDevReactBoardCodeFaqList = () => {
-	const importHmtl = `// @/components/board/faq/LmList.jsx
+	const importHmtl = `// @/components/board/faq/PyoList.jsx
 import { useEffect, useState } from 'react';
 import { getFilter } from '@/utils/getFilter';
 
-export const LmBoardList = ({data}) => {
+export const PyoBoardList = ({data}) => {
 	const [showNum, setShowNum] = useState([])
 	const { list } = data;
 
@@ -22,10 +22,10 @@ export const LmBoardList = ({data}) => {
 	}, [data]);
 
 	return (
-		<div className='lm-board-faq'>
+		<div className='pyo-board-faq'>
 			{list.map((list, index) => (
 				<div
-					className={\`lm-board-item \${showNum[index] ? 'active' : ''}\`}
+					className={\`pyo-board-item \${showNum[index] ? 'active' : ''}\`}
 					key={index}
 					onClick={() => { handleViewClick(index) }}
 				>
@@ -42,7 +42,7 @@ export const LmBoardList = ({data}) => {
 
 	return (
 		<>
-			<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 		</>
 	);
 };

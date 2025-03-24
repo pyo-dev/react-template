@@ -1,9 +1,9 @@
 import { useRecoilState } from 'recoil';
-import { LM_USER_INFO } from '@/store/storeUserInfo';
-import { LmAxios } from '@/axios/LmAxios';
+import { PYO_USER_INFO } from '@/store/storeUserInfo';
+import { PyoAxios } from '@/axios/PyoAxios';
 
-const HOOK_LM_USER_INFO = () => {
-	const [getUserInfo, updateUserInfo] = useRecoilState(LM_USER_INFO);
+const HOOK_PYO_USER_INFO = () => {
+	const [getUserInfo, updateUserInfo] = useRecoilState(PYO_USER_INFO);
 
 	const setUserInfo = async (id) => {
 
@@ -13,13 +13,13 @@ const HOOK_LM_USER_INFO = () => {
 		}
 
 		try {
-			const res = await LmAxios({
+			const res = await PyoAxios({
 				method: 'GET',
 				url: `/user_info.php?user_id=${id}`,
 			});
 			const resData = res.data.data;
-			updateUserInfo((prevLmPop) => ({
-				...prevLmPop,
+			updateUserInfo((prevPyoPop) => ({
+				...prevPyoPop,
 				...resData
 			}));
 		} catch (err) {
@@ -33,4 +33,4 @@ const HOOK_LM_USER_INFO = () => {
 	};
 };
 
-export default HOOK_LM_USER_INFO;
+export default HOOK_PYO_USER_INFO;

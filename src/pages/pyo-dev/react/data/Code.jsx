@@ -45,56 +45,56 @@ export const PyoDevReactData = () => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<div className="lm-panel-inner-title">부모 컴포넌트 데이터1</div>
-				<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<div className="pyo-panel-inner-title">부모 컴포넌트 데이터1</div>
+				<div className='pyo-panel-flex-inner'>
 					<input
 						type="text"
 						name="name"
-						className='lm-input'
+						className='pyo-input'
 						value={prposData1.name || ''}
 						onChange={handleChangeData1}
 						placeholder="데이터1 이름"
 					/>
 				</div>
-				<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-inner'>
 					<input
 						type="text"
 						name="tell"
-						className='lm-input'
+						className='pyo-input'
 						value={prposData1.tell || ''}
 						onChange={handleChangeData1}
 						placeholder="데이터1 전화번호"
 					/>
 				</div>
-				<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-inner'>
 					이름 : {prposData1.name} <br />
 					전화버호 : {prposData1.tell}
 				</div>
 			</div>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<div className="lm-panel-inner-title">부모 컴포넌트 데이터2</div>
-				<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<div className="pyo-panel-inner-title">부모 컴포넌트 데이터2</div>
+				<div className='pyo-panel-flex-inner'>
 					<input
 						type="text"
 						name="name"
-						className='lm-input'
+						className='pyo-input'
 						value={prposData2.name || ''}
 						onChange={handleChangeData2}
 						placeholder="데이터2 이름"
 					/>
 				</div>
-				<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-inner'>
 					<input
 						type="text"
 						name="tell"
-						className='lm-input'
+						className='pyo-input'
 						value={prposData2.tell || ''}
 						onChange={handleChangeData2}
 						placeholder="데이터2 전화번호"
 					/>
 				</div>
-				<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-inner'>
 					이름 : {prposData2.name} <br />
 					전화버호 : {prposData2.tell}
 				</div>
@@ -110,10 +110,10 @@ export const PyoDevReactData = () => {
 	const sub1Html = `// Sub1
 export const PyoDevReactDataSub1 = ({data}) => {
 	return (
-		<div className="lm-panel lm-panel-flex-wrap">
-			<div className="lm-panel-inner-title">자식 컴포넌트1 데이터1</div>
+		<div className="pyo-panel pyo-panel-flex-wrap">
+			<div className="pyo-panel-inner-title">자식 컴포넌트1 데이터1</div>
 
-			<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel-flex-inner'>
 				이름 : {data.name} <br />
 				전화버호 : {data.tell}
 			</div>
@@ -125,14 +125,14 @@ export const PyoDevReactDataSub1 = ({data}) => {
 	const sub2Html = `// sub2
 export const PyoDevReactDataSub2 = ({data, dataChange}) => {
 	return (
-		<div className="lm-panel lm-panel-flex-wrap">
-			<div className="lm-panel-inner-title">자식 컴포넌트2 데이터2</div>
+		<div className="pyo-panel pyo-panel-flex-wrap">
+			<div className="pyo-panel-inner-title">자식 컴포넌트2 데이터2</div>
 
-			<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel-flex-inner'>
 				<input
 					type="text"
 					name="name"
-					className='lm-input'
+					className='pyo-input'
 					value={data.name || ''}
 					onChange={(e) => dataChange((prevData) => ({
 						...prevData,
@@ -141,11 +141,11 @@ export const PyoDevReactDataSub2 = ({data, dataChange}) => {
 					placeholder="데이터2 이름"
 				/>
 			</div>
-			<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel-flex-inner'>
 				<input
 					type="text"
 					name="tell"
-					className='lm-input'
+					className='pyo-input'
 					value={data.tell || ''}
 					onChange={(e) => dataChange((prevData) => ({
 						...prevData,
@@ -154,7 +154,7 @@ export const PyoDevReactDataSub2 = ({data, dataChange}) => {
 					placeholder="데이터2 전화번호"
 				/>
 			</div>
-			<div className='lm-panel-flex-inner'>
+			<div className='pyo-panel-flex-inner'>
 				이름 : {data.name} <br />
 				전화버호 : {data.tell}
 			</div>
@@ -189,59 +189,59 @@ export const PyoDevReactDataSub3 = ({dataChange1, dataChange2}) => {
 	}
 	return (
 		<>
-			<div className="lm-panel lm-panel-flex-wrap">
-				<div className="lm-panel-inner-title">자식 컴포넌트3 데이터1</div>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<div className="pyo-panel-inner-title">자식 컴포넌트3 데이터1</div>
 
-				<div className='lm-panel-flex-wrap'>
-					<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-wrap'>
+					<div className='pyo-panel-flex-inner'>
 						<input
 							type="text"
 							name="name"
-							className='lm-input'
+							className='pyo-input'
 							value={reqData[0]?.name || ''}
 							onChange={(e) => handleChangeData(e, 0)}
 							placeholder="데이터1 이름"
 						/>
 					</div>
-					<div className='lm-panel-flex-inner'>
+					<div className='pyo-panel-flex-inner'>
 						<input
 							type="text"
 							name="tell"
-							className='lm-input'
+							className='pyo-input'
 							value={reqData[0]?.tell || ''}
 							onChange={(e) => handleChangeData(e, 0)}
 							placeholder="데이터1 전화번호"
 						/>
 					</div>
-					<button className='lm-button color-black' onClick={(e) => parentDataChange(e, 0)}>부모 데이터1 변경</button>
+					<button className='pyo-button color-black' onClick={(e) => parentDataChange(e, 0)}>부모 데이터1 변경</button>
 				</div>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
-				<div className="lm-panel-inner-title">자식 컴포넌트3 데이터2</div>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<div className="pyo-panel-inner-title">자식 컴포넌트3 데이터2</div>
 
-				<div className='lm-panel-flex-wrap'>
-					<div className='lm-panel-flex-inner'>
+				<div className='pyo-panel-flex-wrap'>
+					<div className='pyo-panel-flex-inner'>
 						<input
 							type="text"
 							name="name"
-							className='lm-input'
+							className='pyo-input'
 							value={reqData[1]?.name || ''}
 							onChange={(e) => handleChangeData(e, 1)}
 							placeholder="데이터1 이름"
 						/>
 					</div>
-					<div className='lm-panel-flex-inner'>
+					<div className='pyo-panel-flex-inner'>
 						<input
 							type="text"
 							name="tell"
-							className='lm-input'
+							className='pyo-input'
 							value={reqData[1]?.tell || ''}
 							onChange={(e) => handleChangeData(e, 1)}
 							placeholder="데이터1 전화번호"
 						/>
 					</div>
-					<button className='lm-button color-black' onClick={(e) => parentDataChange(e, 1)}>부모 데이터1 변경</button>
+					<button className='pyo-button color-black' onClick={(e) => parentDataChange(e, 1)}>부모 데이터1 변경</button>
 				</div>
 			</div>
 		</>
@@ -251,11 +251,11 @@ export const PyoDevReactDataSub3 = ({dataChange1, dataChange2}) => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{parentstHmtl}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sub1Html}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sub2Html}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sub3Html}</Highlight>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{parentstHmtl}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{sub1Html}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{sub2Html}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{sub3Html}</Highlight>
 			</div>
 		</>
 	);

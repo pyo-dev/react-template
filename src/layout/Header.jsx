@@ -1,8 +1,8 @@
-import { LmNavButton } from "@/components/LmButton";
+import { PyoNavButton } from "@/components/PyoButton";
 
 export const LayoutHeader = () => {
 	return (
-		<div className="lmHeader">
+		<div className="pyoHeader">
 			<div className="logo">PYO-DEV</div>
 			<div className="profile">
 				<div className="img" style={{backgroundImage: 'url(https://dimg.donga.com/wps/NEWS/IMAGE/2009/06/09/7132013.1.jpg)'}}></div>
@@ -12,18 +12,18 @@ export const LayoutHeader = () => {
 			</div>
 			<div className="nav">
 				<div className="title">메인</div>
-				<LmNavButton to="/" lmParents={true}><span className="lm-icon-doc color-white"></span>대시보드</LmNavButton>
+				<PyoNavButton to="/" pyoParents={true}><span className="pyo-icon-doc color-white"></span>대시보드</PyoNavButton>
 			</div>
 			<div className="nav">
 				<div className="title">pyo-dev</div>
-				<LmNavButton to="/pyo-dev/design" lmParents={true}><span className="lm-icon-smile color-white"></span>디자인 에셋</LmNavButton>
-				<LmNavButton to="/pyo-dev/filter" lmParents={true}><span className="lm-icon-el color-white"></span>필터</LmNavButton>
-				<LmNavButton to="/pyo-dev/loader" lmParents={true}><span className="lm-icon-play color-white"></span>로딩 샘플</LmNavButton>
-				<LmNavButton to="/pyo-dev/react" lmParents={true}><span className="lm-icon-star color-white"></span>react</LmNavButton>
+				<PyoNavButton to="/pyo-dev/design" pyoParents={true}><span className="pyo-icon-smile color-white"></span>디자인 에셋</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/filter" pyoParents={true}><span className="pyo-icon-el color-white"></span>필터</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/loader" pyoParents={true}><span className="pyo-icon-play color-white"></span>로딩 샘플</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react" pyoParents={true}><span className="pyo-icon-star color-white"></span>react</PyoNavButton>
 			</div>
 			<div className="nav last">
 				<div className="title">샘플 템플릿</div>
-				<LmNavButton to="/company" lmParents={true}><span className="lm-icon-hart color-white"></span>메인</LmNavButton>
+				<PyoNavButton to="/company" pyoParents={true}><span className="pyo-icon-hart color-white"></span>메인</PyoNavButton>
 			</div>
 		</div>
 	);

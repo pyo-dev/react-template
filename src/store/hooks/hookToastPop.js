@@ -1,22 +1,22 @@
 import { useRecoilState } from 'recoil';
-import { LM_TOAST_POP } from '@/store/storeToastPop';
+import { PYO_TOAST_POP } from '@/store/storeToastPop';
 
-const HOOK_LM_TOAST_POP = () => {
-	const [getLmToastPop, updateLmToastPop] = useRecoilState(LM_TOAST_POP);
+const HOOK_PYO_TOAST_POP = () => {
+	const [getPyoToastPop, updatePyoToastPop] = useRecoilState(PYO_TOAST_POP);
 
-	const setLmToastPop = (data) => {
-		updateLmToastPop((prevLmToastPop) => {
+	const setPyoToastPop = (data) => {
+		updatePyoToastPop((prevPyoToastPop) => {
 			return {
-				...prevLmToastPop,
+				...prevPyoToastPop,
 				...data
 			}
 		});
 	};
 
 	return {
-		getLmToastPop,
-		setLmToastPop,
+		getPyoToastPop,
+		setPyoToastPop,
 	};
 };
 
-export default HOOK_LM_TOAST_POP;
+export default HOOK_PYO_TOAST_POP;

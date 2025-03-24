@@ -1,5 +1,5 @@
 
-.lm-loding{
+.pyo-loding{
 	z-index: 9999;
 	position: fixed;
 	top: 0;
@@ -47,7 +47,7 @@
 	}
 }
 
-.lm-pop{
+.pyo-pop{
 	z-index: 9999;
 	position: fixed;
 	top: 0;
@@ -96,25 +96,25 @@
 			min-width: 100px;
 			padding: 14px 16px;
 			border-radius: 3px;
-			border: 1px solid nth($LM-point-color, 1);
-			background-color: nth($LM-point-color, 1);
+			border: 1px solid nth($PYO-point-color, 1);
+			background-color: nth($PYO-point-color, 1);
 			font-size: 14px;
 			font-weight: 500;
 			color: #fff;
-			&.lm-pop-bt-cancle{
-				border-color: nth($LM-point-color, 1);
+			&.pyo-pop-bt-cancle{
+				border-color: nth($PYO-point-color, 1);
 				background-color: #fff;
-				color: nth($LM-point-color, 1);
+				color: nth($PYO-point-color, 1);
 			}
 		}
 	}
 }
 
-.lm-pop-toast-wrap{
+.pyo-pop-toast-wrap{
 	z-index: 9999;
 	position: fixed;
 }
-.lm-pop-toast{
+.pyo-pop-toast{
 	margin-bottom: 10px;
 	opacity: 0;
 	transition: all 0.5s;
@@ -134,7 +134,7 @@
 		gap: 16px;
 		padding: 20px;
 		border-radius: 8px;
-		border: 1px solid nth($LM-point-color, 1);
+		border: 1px solid nth($PYO-point-color, 1);
 		background-color: #fff;
 		box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.10);
 		&.guide{
@@ -166,7 +166,7 @@
 		width: 24px;
 		height: 24px;
 		border-radius: 100%;
-		background-color: nth($LM-point-color, 1);
+		background-color: nth($PYO-point-color, 1);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-image: url(@/assets/img/icon/icon-i-2.svg);
@@ -198,7 +198,7 @@
 	}
 }
 
-.lm-pop-tooltip{
+.pyo-pop-tooltip{
 	z-index: 88;
 	position: absolute;
 	top: calc(100% + 8px + 10px);

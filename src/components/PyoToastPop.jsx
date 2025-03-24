@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
-import HOOK_LM_TOAST_POP from "@/store/hooks/hookToastPop";
-import LmToastPopItem from "@/components/LmToastPopItem";
+import HOOK_PYO_TOAST_POP from "@/store/hooks/hookToastPop";
+import PyoToastPopItem from "@/components/PyoToastPopItem";
 
-const LmToastPop = () => {
+const PyoToastPop = () => {
 	const [items, setItems] = useState([]);
 	const [itemsLength, setItemsLength] = useState(0);
-	const { getLmToastPop, setLmToastPop } = HOOK_LM_TOAST_POP();
+	const { getPyoToastPop, setPyoToastPop } = HOOK_PYO_TOAST_POP();
 
 	const closeToastPop = () => {
 		if(items.length === itemsLength){
-			setLmToastPop(getLmToastPop.reset);
+			setPyoToastPop(getPyoToastPop.reset);
 			setItemsLength(0);
 			setItems([]);
 		}
@@ -17,28 +17,28 @@ const LmToastPop = () => {
 
 	useEffect(() => {
 		let reData = items;
-		if (getLmToastPop.items) {
-			reData.push(getLmToastPop.items);
+		if (getPyoToastPop.items) {
+			reData.push(getPyoToastPop.items);
 			setItems(reData);
 			setItemsLength(items.length + 1);
 		}
 		return (
-			setLmToastPop(getLmToastPop.reset)
+			setPyoToastPop(getPyoToastPop.reset)
 		);
-	}, [getLmToastPop.items]);
+	}, [getPyoToastPop.items]);
 
 	return (
 		items.length > 0 && (
 			<div
-				className="lm-pop-toast-wrap"
+				className="pyo-pop-toast-wrap"
 				style={{
-					...getLmToastPop.position,
-					width: getLmToastPop.width,
-					padding: getLmToastPop.padding
+					...getPyoToastPop.position,
+					width: getPyoToastPop.width,
+					padding: getPyoToastPop.padding
 				}}
 			>
 				{items.map((item, index) => (
-					<LmToastPopItem
+					<PyoToastPopItem
 						data={item}
 						closeAc={closeToastPop} // close 함수 전달
 						key={index}
@@ -49,4 +49,4 @@ const LmToastPop = () => {
 	);
 };
 
-export default LmToastPop;
+export default PyoToastPop;

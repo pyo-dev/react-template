@@ -8,13 +8,13 @@ export const ReChartBar = () => {
 
 	return (
 		<>
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<button
-					className={`lm-button color-1 s-s ${viewType !== 'preview' && 'line'}`}
+					className={`pyo-button color-1 s-s ${viewType !== 'preview' && 'line'}`}
 					onClick={() => setViewType('preview')}
 				>Preview</button>
 				<button
-					className={`lm-button color-1 s-s ${viewType !== 'code' && 'line'}`}
+					className={`pyo-button color-1 s-s ${viewType !== 'code' && 'line'}`}
 					onClick={() => setViewType('code')}
 				>Code</button>
 				{viewType === 'preview' && <ReChartBarPreview/>}

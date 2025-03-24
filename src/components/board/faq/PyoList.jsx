@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getFilter } from '@/utils/getFilter';
 
-export const LmBoardList = ({data}) => {
+export const PyoBoardList = ({data}) => {
 	const [showNum, setShowNum] = useState([])
 	const { list } = data;
 
@@ -18,10 +18,10 @@ export const LmBoardList = ({data}) => {
 	}, [data]);
 
 	return (
-		<div className='lm-board-faq'>
+		<div className='pyo-board-faq'>
 			{list.map((list, index) => (
 				<div
-					className={`lm-board-item ${showNum[index] ? 'active' : ''}`}
+					className={`pyo-board-item ${showNum[index] ? 'active' : ''}`}
 					key={index}
 					onClick={() => { handleViewClick(index) }}
 				>

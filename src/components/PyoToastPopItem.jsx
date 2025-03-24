@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const LmToastPopItem = ({ data, closeAc }) => {
+const PyoToastPopItem = ({ data, closeAc }) => {
 	// props로 data와 close를 받음
 	const [show, setShow] = useState(false);
 	const [showClass, setShowClass] = useState("");
@@ -37,7 +37,7 @@ const LmToastPopItem = ({ data, closeAc }) => {
 	return (
 		show && 
 		<div
-			className={`lm-pop-toast ${showClass}`}
+			className={`pyo-pop-toast ${showClass}`}
 			style={{ height: innerHeight }}
 		>
 			<div className={`inner ${data.type}`} ref={innerRef}>
@@ -54,4 +54,4 @@ const LmToastPopItem = ({ data, closeAc }) => {
 	);
 };
 
-export default LmToastPopItem;
+export default PyoToastPopItem;

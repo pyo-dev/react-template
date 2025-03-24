@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { LmAxios } from '@/axios/LmAxios';
+import { PyoAxios } from '@/axios/PyoAxios';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getFilter } from '@/utils/getFilter';
 
@@ -10,7 +10,7 @@ export const PyoDevReactBoardNoticeView = () => {
 
 	const getData = async () => {
 		try {
-			const res = await LmAxios({
+			const res = await PyoAxios({
 				method: 'GET',
 				url: `/board_detail.php?viewNo=${viewNo}`,
 			});
@@ -28,7 +28,7 @@ export const PyoDevReactBoardNoticeView = () => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
 				<div className='w-full'>
 					<div>제목 : {viewData?.subject}</div>
 					<div>글쓴이 : {viewData?.writer}</div>
@@ -39,7 +39,7 @@ export const PyoDevReactBoardNoticeView = () => {
 				</div>
 			</div>
 			<button
-				className='lm-button color-1'
+				className='pyo-button color-1'
 				onClick={() => { navigate(-1) }}
 			>목록</button>
 		</>

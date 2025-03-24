@@ -1,6 +1,6 @@
 export const PyoDevMain = () => {
 	return (
-		<div className="lm-panel">
+		<div className="pyo-panel">
 			메인페이지
 		</div>
 	);

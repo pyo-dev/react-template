@@ -2,11 +2,11 @@ import { atom } from 'recoil';
 import { recoilPersist } from 'recoil-persist';
 
 const { persistAtom } = recoilPersist({
-	key: 'LM_POP',
+	key: 'PYO_POP',
 	// storage: sessionStorage,
 });
 
-const LM_POP_RESET = {
+const PYO_POP_RESET = {
 	show: false,
 	type: 'alert',
 	title: null,
@@ -17,11 +17,11 @@ const LM_POP_RESET = {
 	success_fun: null
 }
 
-export const LM_POP = atom({
-	key: 'LM_POP_ATOM',
+export const PYO_POP = atom({
+	key: 'PYO_POP_ATOM',
 	default: {
-		reset: LM_POP_RESET,
-		...LM_POP_RESET
+		reset: PYO_POP_RESET,
+		...PYO_POP_RESET
 	},
 	effects_UNSTABLE: [persistAtom],
 });

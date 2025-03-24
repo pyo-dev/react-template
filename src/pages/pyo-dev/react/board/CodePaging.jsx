@@ -1,10 +1,10 @@
 import Highlight from 'react-highlight'
 
 export const PyoDevReactBoardCodePaging = () => {
-	const importHmtl = `// @/components/board/LmPaging.jsx
+	const importHmtl = `// @/components/board/PyoPaging.jsx
 import { useNavigate } from 'react-router-dom';
 
-export const LmPaging = ({data}) => {
+export const PyoPaging = ({data}) => {
 	const navigate = useNavigate();
 	const { url, currentPage, totalPages, maxPagesToShow } = data;
 
@@ -47,7 +47,7 @@ export const LmPaging = ({data}) => {
 
 
 		return (
-			<div className="lm-paging">
+			<div className="pyo-paging">
 				{arrowBt[0]}
 				{arrowBt[1]}
 				<div className='num'>
@@ -70,7 +70,7 @@ export const LmPaging = ({data}) => {
 
 	return (
 		<>
-			<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 		</>
 	);
 };

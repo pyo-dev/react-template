@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-import { LmNavButton } from "@/components/LmButton";
+import { PyoNavButton } from "@/components/PyoButton";
 import { FormCheckRadio } from "./CheckRadio";
 import { FormInput } from "./Input";
 import { FormSelect } from "./Select";
@@ -14,12 +14,12 @@ export const PyoDevDesignForm = () => {
 
 	return (
 		<>
-			<div className="lm-tab">
-				<LmNavButton to="/pyo-dev/design?type=form"><div className="lm-icon-pin"></div>Checkbox Radio</LmNavButton>
-				<LmNavButton to="/pyo-dev/design?type=form&formType=input"><div className="lm-icon-pin"></div>Input</LmNavButton>
-				<LmNavButton to="/pyo-dev/design?type=form&formType=select"><div className="lm-icon-pin"></div>Select</LmNavButton>
-				<LmNavButton to="/pyo-dev/design?type=form&formType=textarea"><div className="lm-icon-pin"></div>Textarea</LmNavButton>
-				<LmNavButton to="/pyo-dev/design?type=form&formType=table"><div className="lm-icon-pin"></div>Table ...etc</LmNavButton>
+			<div className="pyo-tab">
+				<PyoNavButton to="/pyo-dev/design?type=form"><div className="pyo-icon-pin"></div>Checkbox Radio</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/design?type=form&formType=input"><div className="pyo-icon-pin"></div>Input</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/design?type=form&formType=select"><div className="pyo-icon-pin"></div>Select</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/design?type=form&formType=textarea"><div className="pyo-icon-pin"></div>Textarea</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/design?type=form&formType=table"><div className="pyo-icon-pin"></div>Table ...etc</PyoNavButton>
 			</div>
 			{getType === 'checkradio' && <FormCheckRadio />}
 			{getType === 'input' && <FormInput />}

@@ -1,20 +1,20 @@
 import { useRecoilState } from 'recoil';
-import { LM_LODING } from '@/store/storeLoding';
+import { PYO_LODING } from '@/store/storeLoding';
 
-const HOOK_LM_LODING = () => {
-	const [getLmLoding, updateLmLoding] = useRecoilState(LM_LODING);
+const HOOK_PYO_LODING = () => {
+	const [getPyoLoding, updatePyoLoding] = useRecoilState(PYO_LODING);
 
-	const setLmLoding = (data) => {
-		updateLmLoding((prevLmLoding) => ({
-			...prevLmLoding,
+	const setPyoLoding = (data) => {
+		updatePyoLoding((prevPyoLoding) => ({
+			...prevPyoLoding,
 			...data
 		}));
 	};
 
 	return {
-		getLmLoding,
-		setLmLoding,
+		getPyoLoding,
+		setPyoLoding,
 	};
 };
 
-export default HOOK_LM_LODING;
+export default HOOK_PYO_LODING;

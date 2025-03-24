@@ -180,6 +180,6 @@ export const ReChartLinePreview = () => {
 
 export const ReChartLineCode = () => {
 	return (
-		<Highlight className='javascript lm-panel-code'>{chartCode}</Highlight>
+		<Highlight className='javascript pyo-panel-code'>{chartCode}</Highlight>
 	);
 };

@@ -11,7 +11,7 @@ export const LineChart = ({data}) => {
 	// Line 차트의 데이터셋 데이터
 	let datasetsData = data?.datasetsData || [12, 19, 3, 5, 2, 3, 20];
 
-	const lmData = {
+	const pyoData = {
 		labels: labelData,
 		datasets: [
 			{
@@ -83,5 +83,5 @@ export const LineChart = ({data}) => {
 		}
 	};
 
-	return <Line data={lmData} options={options} />;
+	return <Line data={pyoData} options={options} />;
 };

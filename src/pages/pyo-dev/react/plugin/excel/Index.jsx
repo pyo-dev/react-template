@@ -218,8 +218,8 @@ export const 컴포넌트이름 = () => {
 	};
 
 	return (
-		<div className="lm-panel lm-panel-flex-wrap">
-			<Highlight className='javascript lm-panel-code'>{pageCode}</Highlight>
+		<div className="pyo-panel pyo-panel-flex-wrap">
+			<Highlight className='javascript pyo-panel-code'>{pageCode}</Highlight>
 			<div>
 				<button onClick={downloadExcel}>Download Excel</button>
 				<div>

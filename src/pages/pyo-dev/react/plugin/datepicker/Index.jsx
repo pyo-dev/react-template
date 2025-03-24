@@ -39,7 +39,7 @@ export const 컴포넌트이름 = () => {
 	return (
 		<>
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				dateFormat="YYYY-MM-dd"
 				selected={startDateA}
@@ -47,7 +47,7 @@ export const 컴포넌트이름 = () => {
 			/>
 
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				dateFormat="YYYY-MM-dd"
 				selected={startDateB}
@@ -58,7 +58,7 @@ export const 컴포넌트이름 = () => {
 			/>
 
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				selectsRange={true}
 				startDate={startDateC}
@@ -67,7 +67,7 @@ export const 컴포넌트이름 = () => {
 			/>
 
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				selectsRange={true}
 				startDate={startDateD}
@@ -78,7 +78,7 @@ export const 컴포넌트이름 = () => {
 			/>
 
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				selected={startDateE}
 				onChange={(date) => setStartDateE(date)}
@@ -86,7 +86,7 @@ export const 컴포넌트이름 = () => {
 			/>
 
 			<DatePicker
-				className="lm-input"
+				className="pyo-input"
 				locale={ko}
 				selectsRange={true}
 				startDate={startDateF}
@@ -121,13 +121,13 @@ export const 컴포넌트이름 = () => {
 	const [startDateF, endDateF] = dateRangeF;
 	return (
 		<>
-			<div className="lm-panel lm-panel-flex-wrap">
-				<Highlight className='javascript lm-panel-code'>{pageCode}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<Highlight className='javascript pyo-panel-code'>{pageCode}</Highlight>
 			</div>
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>기본</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					dateFormat="YYYY-MM-dd"
 					selected={startDateA}
@@ -135,10 +135,10 @@ export const 컴포넌트이름 = () => {
 				/>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>년,월 선택</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					dateFormat="YYYY-MM-dd"
 					selected={startDateB}
@@ -149,10 +149,10 @@ export const 컴포넌트이름 = () => {
 				/>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>ranges 선택</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					selectsRange={true}
 					startDate={startDateC}
@@ -161,10 +161,10 @@ export const 컴포넌트이름 = () => {
 				/>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>이전일 이후일 선택 금지</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					selectsRange={true}
 					startDate={startDateD}
@@ -175,10 +175,10 @@ export const 컴포넌트이름 = () => {
 				/>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>듀얼 달력</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					selected={startDateE}
 					onChange={(date) => setStartDateE(date)}
@@ -186,10 +186,10 @@ export const 컴포넌트이름 = () => {
 				/>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<div>듀얼 달력 + ranges 선택</div>
 				<DatePicker
-					className="lm-input"
+					className="pyo-input"
 					locale={ko}
 					selectsRange={true}
 					startDate={startDateF}

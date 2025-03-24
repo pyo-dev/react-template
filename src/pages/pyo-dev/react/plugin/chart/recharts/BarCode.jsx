@@ -86,6 +86,6 @@ export const 컴포넌트이름 = () => {
 
 export const ReChartBarCode = () => {
 	return (
-		<Highlight className='javascript lm-panel-code'>{chartCode}</Highlight>
+		<Highlight className='javascript pyo-panel-code'>{chartCode}</Highlight>
 	);
 };

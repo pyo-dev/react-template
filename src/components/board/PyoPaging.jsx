@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-export const LmPaging = ({data}) => {
+export const PyoPaging = ({data}) => {
 	const navigate = useNavigate();
 	const { url, currentPage, totalPages, maxPagesToShow } = data;
 
@@ -43,7 +43,7 @@ export const LmPaging = ({data}) => {
 
 
 		return (
-			<div className="lm-paging">
+			<div className="pyo-paging">
 				{arrowBt[0]}
 				{arrowBt[1]}
 				<div className='num'>

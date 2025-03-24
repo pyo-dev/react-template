@@ -14,7 +14,7 @@ import 'chart.js/auto';
 export const 컴포넌트이름 = () => {
 
 
-	const lmData = {
+	const pyoData = {
 		labels: ['빨', '주', '노', '초', '파'],
 		datasets: [
 			{
@@ -49,7 +49,7 @@ export const 컴포넌트이름 = () => {
 		},
 	};
 
-	return <Pie data={lmData} options={options} />;
+	return <Pie data={pyoData} options={options} />;
 };
 
 
@@ -60,7 +60,7 @@ import 'chart.js/auto';
 export const 컴포넌트이름 = () => {
 
 
-	const lmData = {
+	const pyoData = {
 		labels: ['빨', '주', '노', '초', '파'],
 		datasets: [
 			{
@@ -95,7 +95,7 @@ export const 컴포넌트이름 = () => {
 		},
 	};
 
-	return <Doughnut data={lmData} options={options} />;
+	return <Doughnut data={pyoData} options={options} />;
 };
 `
 
@@ -105,7 +105,7 @@ import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
 export const 컴포넌트이름 = ({data}) => {
-	const lmData = {
+	const pyoData = {
 		labels: ['월', '화', '수', '목', '금', '토', '일'],
 		datasets: [
 			{
@@ -177,7 +177,7 @@ export const 컴포넌트이름 = ({data}) => {
 		}
 	};
 
-	return <Line data={lmData} options={options} />;
+	return <Line data={pyoData} options={options} />;
 };
 `
 
@@ -192,7 +192,7 @@ export const 컴포넌트이름 = () => {
 	const datasetsData2 = [1, 2, 3, 5, 2, 3, 20, 12, 19, 3, 5, 50];
 
 	// 차트 데이터 구성
-	const lmData = {
+	const pyoData = {
 		labels: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
 		datasets: [
 			{
@@ -263,23 +263,23 @@ export const 컴포넌트이름 = () => {
 					const titleLines = tooltipModel.title || [];
 					const bodyLines = tooltipModel.body.map(item => item.lines);
 					const pIndex = tooltipModel.dataPoints[0].dataIndex;
-					const lmLabelData = lmData.labels[pIndex];
-					const lmDatasetsData = datasetsData[pIndex];
-					const lmDatasetsData2 = datasetsData2[pIndex];
+					const pyoLabelData = pyoData.labels[pIndex];
+					const pyoDatasetsData = datasetsData[pIndex];
+					const pyoDatasetsData2 = datasetsData2[pIndex];
 					// 툴팁 내용 업데이트
 					let innerHtml = '<div style="min-width: 96px;">';
 					titleLines.forEach(title => {
-						innerHtml += \`<div style="font-size: 14px; font-weight: 600;">\${lmLabelData}</div>\`;
+						innerHtml += \`<div style="font-size: 14px; font-weight: 600;">\${pyoLabelData}</div>\`;
 					});
 					bodyLines.forEach(body => {
 						innerHtml += \`
 							<div style="display: flex; justify-content: space-between; font-size: 13px; margin-top: 5px;">
 								<div style="color: #B1B9CB">상담</div>
-								<div>\${lmDatasetsData?.toLocaleString()}건</div>
+								<div>\${pyoDatasetsData?.toLocaleString()}건</div>
 							</div>
 							<div style="display: flex; justify-content: space-between; font-size: 13px;">
 								<div style="color: #B1B9CB">답변</div>
-								<div>\${lmDatasetsData2?.toLocaleString()}건</div>
+								<div>\${pyoDatasetsData2?.toLocaleString()}건</div>
 							</div>
 						\`;
 					});
@@ -360,7 +360,7 @@ export const 컴포넌트이름 = () => {
 		}
 	};
 
-	return <Bar data={lmData} options={options} />;
+	return <Bar data={pyoData} options={options} />;
 };
 `
 
@@ -408,8 +408,8 @@ export const 컴포넌트이름 = () => {
 	return (
 		<>
 
-			<div className="lm-panel lm-panel-flex-wrap">
-				<Highlight className='javascript lm-panel-code'>{chartCode1}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<Highlight className='javascript pyo-panel-code'>{chartCode1}</Highlight>
 				<div style={{height: '222px'}}> 
 					<PieChart />
 				</div>
@@ -418,15 +418,15 @@ export const 컴포넌트이름 = () => {
 				</div>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
-			<Highlight className='javascript lm-panel-code'>{chartCode2}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+			<Highlight className='javascript pyo-panel-code'>{chartCode2}</Highlight>
 				<div style={{width: '100%', height: '222px'}}> 
 					<LineChart data={lineChartData} />
 				</div>
 			</div>
 
-			<div className="lm-panel lm-panel-flex-wrap">
-			<Highlight className='javascript lm-panel-code'>{chartCode3}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+			<Highlight className='javascript pyo-panel-code'>{chartCode3}</Highlight>
 				<div style={{width: '100%', height: '222px'}}> 
 					<BarChart data={barChartData} />
 				</div>

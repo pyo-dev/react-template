@@ -1,24 +1,24 @@
-import HOOK_LM_TOAST_POP from '@/store/hooks/hookToastPop';
+import HOOK_PYO_TOAST_POP from '@/store/hooks/hookToastPop';
 import { getEvent } from "@/utils/getEvent";
 
 export const PyoDevDesignTab = () => {
-	const { setLmToastPop } = HOOK_LM_TOAST_POP();
+	const { setPyoToastPop } = HOOK_PYO_TOAST_POP();
 	let reqHtml = [
-`<div class="lm-tab">
+`<div class="pyo-tab">
 	<button class="active">button</button>
 	<button>button</button>
 	<button>button</button>
 	<button>button</button>
 	<button>button</button>
 </div>`, 
-`<div class="lm-tab-type2">
+`<div class="pyo-tab-type2">
 	<button class="active">button</button>
 	<button>button</button>
 	<button>button</button>
 	<button>button</button>
 	<button>button</button>
 </div>`, 
-`<div class="lm-tab-type3">
+`<div class="pyo-tab-type3">
 	<button class="active">button</button>
 	<button>button</button>
 	<button>button</button>
@@ -29,11 +29,11 @@ export const PyoDevDesignTab = () => {
 
 	const copyEl = (index) => {
 		getEvent.copyText(reqHtml[index]);
-		setLmToastPop({
+		setPyoToastPop({
 			items: {
 				type: 'guide',
 				iconType: 'check',
-				title: 'lm-tab 복사',
+				title: 'pyo-tab 복사',
 				contents: '클립보드에 복사되었습니다.',
 			}
 		});
@@ -42,7 +42,7 @@ export const PyoDevDesignTab = () => {
 	return (
 		<>
 			<div dangerouslySetInnerHTML={{ __html: reqHtml[0] }} onClick={ () => copyEl(0)}></div>
-			<div className="lm-panel">
+			<div className="pyo-panel">
 				<div dangerouslySetInnerHTML={{ __html: reqHtml[1] }} onClick={ () => copyEl(1)}></div>
 				<div dangerouslySetInnerHTML={{ __html: reqHtml[2] }} onClick={ () => copyEl(2)}></div>
 			</div>

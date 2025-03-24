@@ -1,38 +1,38 @@
 import Highlight from 'react-highlight'
 
-import HOOK_LM_LODING from '@/store/hooks/hookLoding';
-import HOOK_LM_POP from '@/store/hooks/hookPop';
-import HOOK_LM_TOAST_POP from '@/store/hooks/hookToastPop';
+import HOOK_PYO_LODING from '@/store/hooks/hookLoding';
+import HOOK_PYO_POP from '@/store/hooks/hookPop';
+import HOOK_PYO_TOAST_POP from '@/store/hooks/hookToastPop';
 
 export const PyoDevReactPopup = () => {
-	const commonHtml = `// @/components/LmCommon.jsx // 공통
-import LmLoding from '@/components/LmLoding';
-import LmPop from '@/components/LmPop';
-import LmToastPop from '@/components/LmToastPop';
+	const commonHtml = `// @/components/PyoCommon.jsx // 공통
+import PyoLoding from '@/components/PyoLoding';
+import PyoPop from '@/components/PyoPop';
+import PyoToastPop from '@/components/PyoToastPop';
 
-const LmCommon = () => {
+const PyoCommon = () => {
 	return (
 		<>
-			<LmToastPop/>
-			<LmPop/>
-			<LmLoding/>
+			<PyoToastPop/>
+			<PyoPop/>
+			<PyoLoding/>
 		</>
 	);
 };
 
-export default LmCommon;
+export default PyoCommon;
 `
 
 	const loadingHtml = `// 사용법
-import HOOK_LM_LODING from '@/store/hooks/hookLoding';
+import HOOK_PYO_LODING from '@/store/hooks/hookLoding';
 
 export const 컴포넌트이름 = () => {
-	const { setLmLoding } = HOOK_LM_LODING();
+	const { setPyoLoding } = HOOK_PYO_LODING();
 
 	const openShow = () => {
-		setLmLoding({show: true});
+		setPyoLoding({show: true});
 		setTimeout(() => {
-			setLmLoding({show: false});
+			setPyoLoding({show: false});
 		}, 2000);
 	}
 
@@ -45,13 +45,13 @@ export const 컴포넌트이름 = () => {
 `
 
 	const popHtml = `// 사용법
-import HOOK_LM_POP from '@/store/hooks/hookPop';
+import HOOK_PYO_POP from '@/store/hooks/hookPop';
 
 export const 컴포넌트이름 = () => {
-	const {setLmPop} = HOOK_LM_POP();
+	const {setPyoPop} = HOOK_PYO_POP();
 
 	const openShow = () => {
-		setLmPop({
+		setPyoPop({
 			show: true, // Boolean !필수 값
 			type: 'confirm', // 팝업 모양 String(alert, confirm) !default 'alert' !생략 가능
 			title: '컨펌창이다', // 팝업 타이틀 String !default '' !생략 가능
@@ -85,13 +85,13 @@ export const 컴포넌트이름 = () => {
 `
 
 	const toastHtml = `// 사용법
-import HOOK_LM_TOAST_POP from '@/store/hooks/hookToastPop';
+import HOOK_PYO_TOAST_POP from '@/store/hooks/hookToastPop';
 
 export const 컴포넌트이름 = () => {
-	const { setLmToastPop } = HOOK_LM_TOAST_POP();
+	const { setPyoToastPop } = HOOK_PYO_TOAST_POP();
 
 	const openShow = () => {
-		setLmToastPop({
+		setPyoToastPop({
 			position: { // 팝업 포지션 Object !생략 가능 !default ({bottom: '0', right: '0'}) !생략 가능
 				bottom: '0', 
 				right: '0',
@@ -115,26 +115,26 @@ export const 컴포넌트이름 = () => {
 };
 `
 
-	const { setLmLoding } = HOOK_LM_LODING();
-	const {setLmPop} = HOOK_LM_POP();
-	const { setLmToastPop } = HOOK_LM_TOAST_POP();
+	const { setPyoLoding } = HOOK_PYO_LODING();
+	const {setPyoPop} = HOOK_PYO_POP();
+	const { setPyoToastPop } = HOOK_PYO_TOAST_POP();
 
 	const loadingOpen1 = () => {
-		setLmLoding({show: true});
+		setPyoLoding({show: true});
 		setTimeout(() => {
-			setLmLoding({show: false});
+			setPyoLoding({show: false});
 		}, 2000);
 	}
 
 	const popOpen1 = () => {
-		setLmPop({
+		setPyoPop({
 			show: true,
 			title: '팝업 타이틀'
 		});
 	}
 
 	const popOpen2 = () => {
-		setLmPop({
+		setPyoPop({
 			show: true,
 			title: '팝업 타이틀',
 			contents: '팝업 콘텐츠',
@@ -142,7 +142,7 @@ export const 컴포넌트이름 = () => {
 	}
 
 	const popOpen3 = () => {
-		setLmPop({
+		setPyoPop({
 			show: true,
 			type: 'confirm',
 			title: '컨펌창이다',
@@ -168,7 +168,7 @@ export const 컴포넌트이름 = () => {
 	}
 
 	const toastPopOpen1 = () => {
-		setLmToastPop({
+		setPyoToastPop({
 			items: {
 				title: '11 -- 토스트 팝업 테스트',
 				contents: '토스트 팝업 테스트 중입니다 잘 작동하나요?',
@@ -177,7 +177,7 @@ export const 컴포넌트이름 = () => {
 	}
 
 	const toastPopOpen2 = () => {
-		setLmToastPop({
+		setPyoToastPop({
 			items: {
 				type: 'guide',
 				iconType: 'check',
@@ -188,7 +188,7 @@ export const 컴포넌트이름 = () => {
 	}
 
 	const toastPopOpen3 = () => {
-		setLmToastPop({
+		setPyoToastPop({
 			items: {
 				type: 'warning',
 				iconType: 'feel',
@@ -199,7 +199,7 @@ export const 컴포넌트이름 = () => {
 	}
 
 	const toastPopOpen4 = () => {
-		setLmToastPop({
+		setPyoToastPop({
 			items: {
 				type: 'error',
 				iconType: 'feel',
@@ -211,25 +211,25 @@ export const 컴포넌트이름 = () => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{commonHtml}</Highlight>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{commonHtml}</Highlight>
 			</div>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{loadingHtml}</Highlight>
-				<button className="lm-button color-1 line" onClick={()=> loadingOpen1()}>Loading</button>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{loadingHtml}</Highlight>
+				<button className="pyo-button color-1 line" onClick={()=> loadingOpen1()}>Loading</button>
 			</div>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{popHtml}</Highlight>
-				<button className="lm-button color-1 line" onClick={()=> popOpen1()}>Default Pop</button>
-				<button className="lm-button color-3 line" onClick={()=> popOpen2()}>Title Contents Pop</button>
-				<button className="lm-button color-4 line" onClick={()=> popOpen3()}>Custom Pop</button>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{popHtml}</Highlight>
+				<button className="pyo-button color-1 line" onClick={()=> popOpen1()}>Default Pop</button>
+				<button className="pyo-button color-3 line" onClick={()=> popOpen2()}>Title Contents Pop</button>
+				<button className="pyo-button color-4 line" onClick={()=> popOpen3()}>Custom Pop</button>
 			</div>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{toastHtml}</Highlight>
-				<button className="lm-button color-1 line" onClick={()=> toastPopOpen1()}>Default Toast Pop</button>
-				<button className="lm-button color-3 line" onClick={()=> toastPopOpen2()}>Guide Toast Pop</button>
-				<button className="lm-button color-4 line" onClick={()=> toastPopOpen3()}>Warning Toast Pop</button>
-				<button className="lm-button color-5 line" onClick={()=> toastPopOpen4()}>Error Toast Pop</button>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{toastHtml}</Highlight>
+				<button className="pyo-button color-1 line" onClick={()=> toastPopOpen1()}>Default Toast Pop</button>
+				<button className="pyo-button color-3 line" onClick={()=> toastPopOpen2()}>Guide Toast Pop</button>
+				<button className="pyo-button color-4 line" onClick={()=> toastPopOpen3()}>Warning Toast Pop</button>
+				<button className="pyo-button color-5 line" onClick={()=> toastPopOpen4()}>Error Toast Pop</button>
 			</div>
 		</>
 	);

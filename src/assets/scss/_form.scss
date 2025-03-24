@@ -1,9 +1,9 @@
-.lm-check-radio-box-wrap{
+.pyo-check-radio-box-wrap{
 	display: flex;
 	align-items: center;
 	gap: 20px;
 }
-.lm-check-box{
+.pyo-check-box{
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -34,8 +34,8 @@
 	input{
 		display: none;
 		&:checked + .change-d{
-			border-color: nth($LM-point-color , 1);
-			background-color: nth($LM-point-color , 1);
+			border-color: nth($PYO-point-color , 1);
+			background-color: nth($PYO-point-color , 1);
 			&::after{
 				background-color: #fff;
 			}
@@ -67,7 +67,7 @@
 	}
 }
 
-.lm-radio-box{
+.pyo-radio-box{
 	display: flex;
 	align-items: center;
 	gap: 8px;
@@ -98,8 +98,8 @@
 	input{
 		display: none;
 		&:checked + .change-d{
-			border-color: nth($LM-point-color , 1);
-			background-color: nth($LM-point-color , 1);
+			border-color: nth($PYO-point-color , 1);
+			background-color: nth($PYO-point-color , 1);
 			&::after{
 				background-color: #fff;
 			}
@@ -131,7 +131,7 @@
 	}
 }
 
-.lm-input{
+.pyo-input{
 	padding: 14px 16px;
 	border-radius: 3px;
 	border: 1px solid #E6E6E6;
@@ -198,7 +198,7 @@
 	}
 }
 
-.lm-count-wrap{
+.pyo-count-wrap{
 	display: inline-flex;
 	height: 48px;
 	border: 1px solid #E6E6E6;

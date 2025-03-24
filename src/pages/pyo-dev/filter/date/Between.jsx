@@ -4,7 +4,7 @@ import { getFilter } from '@/utils/getFilter';
 export const FilterDateBetween = () => {
 	let filterJsIm =
 `// javascript
-<script src="/js/lmFilter.js"></script>
+<script src="/js/pyoFilter.js"></script>
 
 // react
 import { getFilter } from '@/utils/getFilter';`;
@@ -22,10 +22,10 @@ getFilter.dateBetween('2024-12-10', '2024-09-01');
 `;
 	
 		return (
-			<div className="lm-panel lm-panel-flex-wrap">
-				<Highlight className='javascript lm-panel-code'>{filterJsIm}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{filterJs}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sampleJs}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<Highlight className='javascript pyo-panel-code'>{filterJsIm}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{filterJs}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{sampleJs}</Highlight>
 			</div>
 		);
 };

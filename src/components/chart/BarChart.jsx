@@ -14,7 +14,7 @@ export const BarChart = ({ data }) => {
 	const datasetsData2 = data?.datasetsData2 || [12, 19, 3, 5, 2, 3, 20];
 
 	// 차트 데이터 구성
-	const lmData = {
+	const pyoData = {
 		labels: reLabelData,
 		datasets: [
 			{
@@ -85,23 +85,23 @@ export const BarChart = ({ data }) => {
 					const titleLines = tooltipModel.title || [];
 					const bodyLines = tooltipModel.body.map(item => item.lines);
 					const pIndex = tooltipModel.dataPoints[0].dataIndex;
-					const lmLabelData = labelData[pIndex];
-					const lmDatasetsData = datasetsData[pIndex];
-					const lmDatasetsData2 = datasetsData2[pIndex];
+					const pyoLabelData = labelData[pIndex];
+					const pyoDatasetsData = datasetsData[pIndex];
+					const pyoDatasetsData2 = datasetsData2[pIndex];
 					// 툴팁 내용 업데이트
 					let innerHtml = '<div style="min-width: 96px;">';
 					titleLines.forEach(title => {
-						innerHtml += `<div style="font-size: 14px; font-weight: 600;">${lmLabelData}</div>`;
+						innerHtml += `<div style="font-size: 14px; font-weight: 600;">${pyoLabelData}</div>`;
 					});
 					bodyLines.forEach(body => {
 						innerHtml += `
 							<div style="display: flex; justify-content: space-between; font-size: 13px; margin-top: 5px;">
 								<div style="color: #B1B9CB">상담</div>
-								<div>${lmDatasetsData?.toLocaleString()}건</div>
+								<div>${pyoDatasetsData?.toLocaleString()}건</div>
 							</div>
 							<div style="display: flex; justify-content: space-between; font-size: 13px;">
 								<div style="color: #B1B9CB">답변</div>
-								<div>${lmDatasetsData2?.toLocaleString()}건</div>
+								<div>${pyoDatasetsData2?.toLocaleString()}건</div>
 							</div>
 						`;
 					});
@@ -182,5 +182,5 @@ export const BarChart = ({ data }) => {
 		}
 	};
 
-	return <Bar data={lmData} options={options} />;
+	return <Bar data={pyoData} options={options} />;
 };

@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-import { LmNavButton } from "@/components/LmButton";
+import { PyoNavButton } from "@/components/PyoButton";
 import { PyoDevPluginSwiper } from "@/pages/pyo-dev/react/plugin/swiper/Index";
 import { PyoDevPluginDatepicker } from "@/pages/pyo-dev/react/plugin/datepicker/Index";
 import { PyoDevPluginChart } from "@/pages/pyo-dev/react/plugin/chart/Index";
@@ -17,15 +17,15 @@ export const PyoDevReactPlugin = () => {
 
 	return (
 		<>
-			<div className="lm-tab">
-				<LmNavButton to="/pyo-dev/react/plugin"><div className="lm-icon-pin"></div>react-helmet</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=swiper"><div className="lm-icon-pin"></div>swiper</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=datepicker"><div className="lm-icon-pin"></div>datepicker</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=editor"><div className="lm-icon-pin"></div>editor</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=chart" lmClass={ getType === 'chart' && 'active' }><div className="lm-icon-pin"></div>chart</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=excel"><div className="lm-icon-pin"></div>excel</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=sortable"><div className="lm-icon-pin"></div>sortable</LmNavButton>
-				<LmNavButton to="/pyo-dev/react/plugin?type=highlight"><div className="lm-icon-pin"></div>highlight</LmNavButton>
+			<div className="pyo-tab">
+				<PyoNavButton to="/pyo-dev/react/plugin"><div className="pyo-icon-pin"></div>react-helmet</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=swiper"><div className="pyo-icon-pin"></div>swiper</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=datepicker"><div className="pyo-icon-pin"></div>datepicker</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=editor"><div className="pyo-icon-pin"></div>editor</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=chart" pyoClass={ getType === 'chart' && 'active' }><div className="pyo-icon-pin"></div>chart</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=excel"><div className="pyo-icon-pin"></div>excel</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=sortable"><div className="pyo-icon-pin"></div>sortable</PyoNavButton>
+				<PyoNavButton to="/pyo-dev/react/plugin?type=highlight"><div className="pyo-icon-pin"></div>highlight</PyoNavButton>
 			</div>
 			{getType === 'reacthelmet' && <PyoDevPluginReactHelmet />}
 			{getType === 'swiper' && <PyoDevPluginSwiper />}

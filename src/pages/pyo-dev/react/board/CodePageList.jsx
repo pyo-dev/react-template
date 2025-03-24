@@ -3,11 +3,11 @@ import Highlight from 'react-highlight'
 export const PyoDevReactBoardCodePageList = () => {
 	const importHmtl = `// @/page/board/notice/List.jsx
 import { useEffect, useState } from 'react';
-import { LmAxios } from '@/axios/LmAxios';
+import { PyoAxios } from '@/axios/PyoAxios';
 import { useParams } from 'react-router-dom';
 
-import { LmBoardList } from '@/components/board/basic/LmList';
-import { LmPaging } from '@/components/board/LmPaging';
+import { PyoBoardList } from '@/components/board/basic/PyoList';
+import { PyoPaging } from '@/components/board/PyoPaging';
 
 export const PyoDevReactBoardNoticeList = () => {
 	const boardUrl = '/pyo-dev/react/board/notice';
@@ -53,7 +53,7 @@ export const PyoDevReactBoardNoticeList = () => {
 
 	const getList = async (currentPage) => {
 		try {
-			const res = await LmAxios({
+			const res = await PyoAxios({
 				method: 'GET',
 				url: \`/board_list.php?pageNo=\${currentPage}&pageRow=\${pageRow}\`,
 			});
@@ -67,9 +67,9 @@ export const PyoDevReactBoardNoticeList = () => {
 
 	return (
 		<>
-			<div className='lm-panel'>
-				<LmBoardList data={listData} />
-				<LmPaging data={pagingData} />
+			<div className='pyo-panel'>
+				<PyoBoardList data={listData} />
+				<PyoPaging data={pagingData} />
 			</div>
 		</>
 	);
@@ -78,7 +78,7 @@ export const PyoDevReactBoardNoticeList = () => {
 
 	return (
 		<>
-			<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 		</>
 	);
 };

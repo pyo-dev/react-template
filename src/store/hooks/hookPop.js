@@ -1,20 +1,20 @@
 import { useRecoilState } from 'recoil';
-import { LM_POP } from '@/store/storePop';
+import { PYO_POP } from '@/store/storePop';
 
-const HOOK_LM_POP = () => {
-	const [getLmPop, updateLmPop] = useRecoilState(LM_POP);
+const HOOK_PYO_POP = () => {
+	const [getPyoPop, updatePyoPop] = useRecoilState(PYO_POP);
 
-	const setLmPop = (data) => {
-		updateLmPop((prevLmPop) => ({
-			...prevLmPop,
+	const setPyoPop = (data) => {
+		updatePyoPop((prevPyoPop) => ({
+			...prevPyoPop,
 			...data
 		}));
 	};
 
 	return {
-		getLmPop,
-		setLmPop,
+		getPyoPop,
+		setPyoPop,
 	};
 };
 
-export default HOOK_LM_POP;
+export default HOOK_PYO_POP;

@@ -10,7 +10,7 @@ export const PyoDevReactBoardCode = () => {
 
 	return (
 		<>
-			<div className="lm-panel lm-panel-flex-wrap">
+			<div className="pyo-panel pyo-panel-flex-wrap">
 				<PyoDevReactBoardCodePaging />
 				<PyoDevReactBoardCodeBasicList />
 				<PyoDevReactBoardCodeBasicView />

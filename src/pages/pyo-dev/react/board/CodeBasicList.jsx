@@ -1,10 +1,10 @@
 import Highlight from 'react-highlight'
 
 export const PyoDevReactBoardCodeBasicList = () => {
-	const importHmtl = `// @/components/board/basic/LmList.jsx
+	const importHmtl = `// @/components/board/basic/PyoList.jsx
 import { useNavigate } from 'react-router-dom';
 
-export const LmBoardList = ({data}) => {
+export const PyoBoardList = ({data}) => {
 	const { url, listHeader, list } = data;
 	const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ export const LmBoardList = ({data}) => {
 
 	return (
 		<>
-			<table className='lm-board-basic'>
+			<table className='pyo-board-basic'>
 				<thead>
 					<tr>
 						{listHeader.map((item, index) => (
@@ -60,7 +60,7 @@ export const LmBoardList = ({data}) => {
 
 	return (
 		<>
-			<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 		</>
 	);
 };

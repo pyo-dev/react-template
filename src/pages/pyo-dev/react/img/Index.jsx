@@ -14,10 +14,10 @@ import { bannerImage1, bannerImage2 } from '@/assets/img';
 export const PyoDevReactImg = () => {
 	return (
 		<>
-			<div className='lm-panel'>
-				<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
+			<div className='pyo-panel'>
+				<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
 			</div>
-			<div className='lm-panel lm-sample-img-wrap'>
+			<div className='pyo-panel pyo-sample-img-wrap'>
 				<img src={bannerImage1} alt="배너이미지1"/>
 				<img src={bannerImage2} alt="배너이미지2"/>
 			</div>
@@ -28,12 +28,12 @@ export const PyoDevReactImg = () => {
 
 	return (
 		<>
-			<div className='lm-panel lm-panel-flex-wrap'>
-				<Highlight className='javascript lm-panel-code'>{importHmtl}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{returnHtml}</Highlight>
+			<div className='pyo-panel pyo-panel-flex-wrap'>
+				<Highlight className='javascript pyo-panel-code'>{importHmtl}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{returnHtml}</Highlight>
 			</div>
-			<div className='lm-panel lm-sample-img-wrap'>
-				<div className="lm-panel-inner-title">샘플</div>
+			<div className='pyo-panel pyo-sample-img-wrap'>
+				<div className="pyo-panel-inner-title">샘플</div>
 				<img src={bannerImage1} alt="배너이미지1"/>
 				<img src={bannerImage2} alt="배너이미지2"/>
 			</div>

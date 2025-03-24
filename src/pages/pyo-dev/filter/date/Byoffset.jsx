@@ -4,7 +4,7 @@ import { getFilter } from '@/utils/getFilter';
 export const FilterDateByoffset = () => {
 	let filterJsIm =
 `// javascript
-<script src="/js/lmFilter.js"></script>
+<script src="/js/pyoFilter.js"></script>
 
 // react
 import { getFilter } from '@/utils/getFilter';`;
@@ -37,10 +37,10 @@ getFilter.dateByOffset(2, 'year', '2024-10-10');
 `;
 
 		return (
-			<div className="lm-panel lm-panel-flex-wrap">
-				<Highlight className='javascript lm-panel-code'>{filterJsIm}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{filterJs}</Highlight>
-				<Highlight className='javascript lm-panel-code'>{sampleJs}</Highlight>
+			<div className="pyo-panel pyo-panel-flex-wrap">
+				<Highlight className='javascript pyo-panel-code'>{filterJsIm}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{filterJs}</Highlight>
+				<Highlight className='javascript pyo-panel-code'>{sampleJs}</Highlight>
 			</div>
 		);
 };
